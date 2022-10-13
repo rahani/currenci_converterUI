@@ -1,5 +1,6 @@
 import { apikey, apiUrl } from "./config.js";
 import { inputAmount, inputCurrency, outputCurrency } from "./doms.js";
+import { handlePersist, handleUpdateHistoryTable } from "./memory.js";
 
 /**
  * @returns header options
@@ -22,5 +23,6 @@ export const handleRequest = () => {
         .then(response => response.text())
         .then(resultText => JSON.parse(resultText))
         .then(result => { outputAmount.value = Number.parseFloat(result.result).toFixed(3) })
+        .then(() => { handlePersist(); handleUpdateHistoryTable() })
         .catch(error => console.log('error', error));
 }

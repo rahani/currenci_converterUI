@@ -68,7 +68,8 @@ input[type=number] {
 
 
 /* set styles of convertor and box */
-.converter {
+.converter,
+.history {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -117,6 +118,11 @@ input[type=number] {
     font-size: 30px;
     font-weight: bold;
 
+}
+
+.history th,
+.history td {
+    padding: 10px;
 }
 
 /* set media styles (mobile devices)*/
