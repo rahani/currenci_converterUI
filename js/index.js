@@ -1,5 +1,6 @@
 import { inputAmount, inputCurrency, outputCurrency, switchButton } from "./doms.js";
 import { handleCalculate, handleSwitch } from "./handlers.js";
+import { handleUpdateHistoryTable } from "./memory.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     // trigger switch button click
@@ -12,8 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     outputCurrency.addEventListener("change", handleCalculate)
 
     // trigger input amount change
-    inputAmount.addEventListener("input", handleCalculate)
-
-    // trigger enter key press in input box
     inputAmount.addEventListener("keyup", handleCalculate);
+
+    // update history table
+    handleUpdateHistoryTable()
+
 });
