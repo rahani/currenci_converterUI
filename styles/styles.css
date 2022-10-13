@@ -1,0 +1,139 @@
+/* Your styles go here. */
+
+/* set margin and padding to 0 in all browsers */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* set body styles as required */
+body {
+    background-color: #f0f0f0;
+    font-family: "helvetica";
+}
+
+/* remove border from all inputs and selects */
+input,
+select,
+button {
+    background: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+/* remove arrow from input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* generic lightgray color for some text  */
+.myGray {
+    color: lightgray
+}
+
+/* generic shadow for boxes and button */
+.shadow {
+    box-shadow: 0px 4px 9px 0px rgba(130, 130, 130, 0.51);
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(130, 130, 130, 0.51);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(130, 130, 130, 0.51);
+}
+
+
+
+/* set styles of header */
+.header {
+    background: #28ceb5;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+
+.header h1 {
+    color: #FfFfff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/* set styles of convertor and box */
+.converter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 180px auto;
+}
+
+.converter .button {
+    background-color: #28ceb5;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content .button img {
+    width: 30px;
+}
+
+.converter .box {
+    width: 260px;
+    height: 80px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.converter .box .sign {
+    font-size: 30px;
+}
+
+.converter .box input {
+    height: 40px;
+    width: 120px;
+    border-width: 0px;
+    font-size: 30px;
+}
+
+.converter .box select {
+    color: #28ceb5;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+/* set media styles (mobile devices)*/
+@media screen and (max-width: 768px) {
+    .header {
+        height: 80px;
+        justify-content: center;
+    }
+
+    .converter {
+        flex-direction: column;
+        margin: 80px auto;
+        gap: 30px;
+    }
+
+    .converter .button {
+        transform: rotate(90deg);
+    }
+
+}
