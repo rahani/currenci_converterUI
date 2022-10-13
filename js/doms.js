@@ -1,0 +1,7 @@
+export const switchButton = document.getElementById("switchButton")
+export const inputAmount = document.getElementById("inputAmount")
+export const inputCurrency = document.getElementById("inputCurrency")
+export const inputSign = document.getElementById("inputSign")
+export const outputAmount = document.getElementById("outputAmount")
+export const outputCurrency = document.getElementById("outputCurrency")
+export const outputSign = document.getElementById("outputSign")
